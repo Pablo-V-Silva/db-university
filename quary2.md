@@ -19,3 +19,18 @@ GROUP BY `exam_id`
 - 4) SELECT `department_id`,COUNT(department_id)
 FROM `degrees`
 GROUP BY `department_id`
+
+__________________________________________________________________
+
+- Esercizi JOIN
+
+- 5) SELECT * FROM `degrees`
+JOIN `students` ON students.degree_id = degrees.id 
+WHERE degrees.name LIKE '%Economia';
+
+- 6) SELECT degrees.name 
+FROM departments
+JOIN degrees ON degrees.department_id = departments.id
+WHERE departments.name LIKE '%Neuroscienze'
+
+- 7) 
