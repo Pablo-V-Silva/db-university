@@ -33,4 +33,15 @@ FROM departments
 JOIN degrees ON degrees.department_id = departments.id
 WHERE departments.name LIKE '%Neuroscienze'
 
-- 7) 
+- 7) SELECT *
+FROM `teachers`
+JOIN course_teacher ON course_teacher.teacher_id = teachers.id
+WHERE course_teacher.teacher_id = 44;
+
+- 8) SELECT degrees.name, degrees.level, degrees.address, degrees.email, degrees.website
+FROM `degrees`
+JOIN `students` ON students.degree_id = degrees.id
+JOIN `departments` ON departments.id = degrees.department_id
+ORDER BY `students`.`surname` ASC, `students`.`name` ASC;
+
+- 9) 
