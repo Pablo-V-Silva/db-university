@@ -1,6 +1,9 @@
 Risposte :
 
 Secondo Esercizio sulle quary 15/12/2021:
+
+- Esercizi GROUP BY
+
 - 1) SELECT COUNT(id) AS 'number-of-student', YEAR(enrolment_date) AS 'enrolment-year'
 FROM `students`
 GROUP BY YEAR(enrolment_date);
@@ -12,3 +15,7 @@ GROUP BY `office_address`
 - 3) SELECT `exam_id` AS 'appello', AVG(`vote`) AS 'average'
 FROM `exam_student`
 GROUP BY `exam_id`
+
+- 4) SELECT `department_id`,COUNT(department_id)
+FROM `degrees`
+GROUP BY `department_id`
