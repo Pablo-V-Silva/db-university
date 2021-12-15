@@ -9,4 +9,6 @@ GROUP BY YEAR(enrolment_date);
 FROM `teachers` 
 GROUP BY `office_address`
 
-- 3) 
+- 3) SELECT `exam_id` AS 'appello', AVG(`vote`) AS 'average'
+FROM `exam_student`
+GROUP BY `exam_id`

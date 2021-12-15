@@ -15,3 +15,4 @@ Risposte esercizio:
 - 7) SELECT COUNT(id) FROM `departments`;
 
 - 8) SELECT COUNT(id) FROM `teachers` WHERE `phone` IS null;
+
