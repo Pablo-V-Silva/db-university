@@ -44,4 +44,17 @@ JOIN `students` ON students.degree_id = degrees.id
 JOIN `departments` ON departments.id = degrees.department_id
 ORDER BY `students`.`surname` ASC, `students`.`name` ASC;
 
-- 9) 
+- 9) SELECT courses.name AS 'courses', degrees.name AS 'degrees', teachers.name AS 'with'
+FROM `courses`
+JOIN `course_teacher` ON course_teacher.course_id = courses.id
+JOIN `teachers` ON teachers.id = course_teacher.teacher_id
+JOIN `degrees` ON degrees.id = courses.degree_id
+
+- 10) SELECT DISTINCT teachers.name AS 'Teacher Name', teachers.surname AS 'Teacher Lastname', departments.name AS 'Department'
+FROM `course_teacher`
+JOIN `courses` ON courses.id = course_teacher.course_id
+JOIN `degrees` ON degrees.id = courses.degree_id
+JOIN `departments` ON departments.id = degrees.department_id
+JOIN `teachers` ON teachers.id = course_teacher.teacher_id
+WHERE `departments`.id = 5
+
